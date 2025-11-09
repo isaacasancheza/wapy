@@ -11,8 +11,7 @@ from .message import (
 )
 
 type Message = Annotated[
-    text.TextMessage,
-    template.TemplateMessage,
+    text.TextMessage | template.TemplateMessage,
     Field(
         discriminator='type',
     ),
