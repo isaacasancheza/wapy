@@ -1,6 +1,6 @@
 [project]
 name = "wapy"
-version = "0.2.1"
+version = "0.3.0"
 description = "WhatsApp Cloud API Pydantic Models"
 authors = [
     { name = "Isaac Sánchez", email = "isaac@elrincondelsanchez.com" }
@@ -20,7 +20,7 @@ dev = [
     "faker",
     "pytest",
     "devtools",
-    "boto3-stubs[socialmessaging]",
+    "boto3-stubs[s3,socialmessaging]",
 ]
 
 [build-system]

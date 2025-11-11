@@ -6,19 +6,13 @@ from .body import (
     BodyComponent,
 )
 from .button import (
+    ButtonComponent,
     QuickReplyButtonComponent,
     URLButtonComponent,
 )
 from .header import (
     HeaderComponent,
 )
-
-type ButtonComponent = Annotated[
-    URLButtonComponent | QuickReplyButtonComponent,
-    Field(
-        discriminator='sub_type',
-    ),
-]
 
 type Component = Annotated[
     BodyComponent | ButtonComponent | HeaderComponent,

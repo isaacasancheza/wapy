@@ -51,3 +51,11 @@ class QuickReplyButtonComponent(BaseModel):
     """
     The position index of the button. You can have up to 3 buttons using index values of 0 to 2.
     """
+
+
+type ButtonComponent = Annotated[
+    URLButtonComponent | QuickReplyButtonComponent,
+    Field(
+        discriminator='sub_type',
+    ),
+]

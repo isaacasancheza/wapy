@@ -7,20 +7,31 @@ from .button import (
     URLButtonParameter,
 )
 from .currency import (
-    Currency,
     CurrencyParameter,
 )
 from .date_time import (
-    DateTime,
     DateTimeParameter,
+)
+from .document import (
+    DocumentParameter,
+)
+from .image import (
+    ImageParameter,
 )
 from .text import (
     TextParameter,
 )
 
 type Parameter = Annotated[
-    TextParameter | CurrencyParameter | DateTimeParameter,
+    TextParameter
+    | ImageParameter
+    | CurrencyParameter
+    | DateTimeParameter
+    | DocumentParameter,
     Field(
         discriminator='type',
     ),
 ]
+"""
+For text-based templates, the only supported parameter types are `text`, `currency`, and `date_time`.
+"""

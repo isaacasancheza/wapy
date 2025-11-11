@@ -13,8 +13,6 @@ class TextParameter(BaseModel):
     type: Literal[constants.ParameterType.TEXT]
     """
     Describes the parameter type. 
-
-    For text-based templates, the only supported parameter types are `text`, `currency`, and `date_time`.
     """
 
     text: str
@@ -32,3 +30,6 @@ class TextParameter(BaseModel):
     """
 
     parameter_name: str | None = None
+    """
+    The parameter name.
+    """
