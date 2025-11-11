@@ -33,26 +33,26 @@ def test_template_message():
         type=wapy.constants.MessageType.TEMPLATE,
         template=wapy.models.messages.template.Template(
             name='delivery_canceled_out_of_stock',
-            language=wapy.models.messages.template.Language(
+            language=wapy.models.messages.Language(
                 code='es_MX',
             ),
             components=[
-                wapy.models.messages.template.components.BodyComponent(
+                wapy.models.messages.BodyComponent(
                     type=wapy.constants.ComponentType.BODY,
                     parameters=[
-                        wapy.models.messages.template.parameters.TextParameter(
+                        wapy.models.messages.TextParameter(
                             type=wapy.constants.ParameterType.TEXT,
                             text=faker.numerify('######'),
                             parameter_name='delivery_number',
                         ),
                     ],
                 ),
-                wapy.models.messages.template.components.URLButtonComponent(
+                wapy.models.messages.URLButtonComponent(
                     type=wapy.constants.ComponentType.BUTTON,
                     index=0,
                     sub_type=wapy.constants.ComponentSubType.URL,
                     parameters=[
-                        wapy.models.messages.template.parameters.URLButtonParameter(
+                        wapy.models.messages.URLButtonParameter(
                             text=faker.uuid4(),
                             type=wapy.constants.ButtonParameterType.TEXT,
                         )

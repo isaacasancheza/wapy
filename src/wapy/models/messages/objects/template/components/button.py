@@ -3,7 +3,7 @@ from typing import Annotated, Literal
 from pydantic import BaseModel, Field
 
 from wapy import constants
-from wapy.models.messages.template.parameters import (
+from wapy.models.messages.objects.template.parameters import (
     QuickReplyButtonParameter,
     URLButtonParameter,
 )
