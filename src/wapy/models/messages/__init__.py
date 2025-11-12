@@ -31,6 +31,7 @@ from .objects import (
     Document,
     Image,
     Location,
+    MessageContext,
     Reaction,
     Sticker,
     Template,

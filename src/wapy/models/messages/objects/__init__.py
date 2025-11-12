@@ -25,6 +25,7 @@ from .media import (
 )
 from .message import (
     Message,
+    MessageContext,
 )
 from .reaction import (
     Reaction,

@@ -1,17 +1,15 @@
-from typing import TypedDict
-
 from pydantic import BaseModel, computed_field
 
 from wapy import constants
 
 
-class Context(TypedDict):
+class MessageContext(BaseModel):
     message_id: str
 
 
 class Message(BaseModel):
     to: str
-    context: Context | None = None
+    context: MessageContext | None = None
 
     @computed_field
     def recipient_type(self) -> constants.RecipientType:
