@@ -13,9 +13,9 @@ phone_number_id = environ['PHONE_NUMBER_ID']
 
 
 def test_text_message():
-    message = wapy.models.messages.text.TextMessage(
+    message = wapy.models.messages.TextMessage(
         to=phone_number,
-        text=wapy.models.messages.text.Text(
+        text=wapy.models.messages.Text(
             body='Saludos',
         ),
         type=wapy.constants.MessageType.TEXT,
@@ -28,10 +28,10 @@ def test_text_message():
 
 
 def test_template_message():
-    message = wapy.models.messages.template.TemplateMessage(
+    message = wapy.models.messages.TemplateMessage(
         to=phone_number,
         type=wapy.constants.MessageType.TEMPLATE,
-        template=wapy.models.messages.template.Template(
+        template=wapy.models.messages.Template(
             name='delivery_canceled_out_of_stock',
             language=wapy.models.messages.Language(
                 code='es_MX',
