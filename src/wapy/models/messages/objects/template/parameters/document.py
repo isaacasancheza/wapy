@@ -3,7 +3,7 @@ from typing import Literal
 from pydantic import BaseModel
 
 from wapy import constants
-from wapy.models.messages.objects.media import Media
+from wapy.models.messages.objects.media import Document
 
 
 class DocumentParameter(BaseModel):
@@ -16,7 +16,7 @@ class DocumentParameter(BaseModel):
     Describes the parameter type. 
     """
 
-    document: Media
+    document: Document
     """
     A media object of type document. 
     

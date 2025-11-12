@@ -10,6 +10,7 @@ class MessageType(StrEnum):
     AUDIO = 'audio'
     CONTACTS = 'contacts'
     LOCATION = 'location'
+    REACTION = 'reaction'
     STICKER = 'sticker'
     VIDEO = 'video'
 

@@ -1,11 +1,27 @@
+from .contact import (
+    Contact,
+    ContactAddress,
+    ContactEmail,
+    ContactName,
+    ContactOrg,
+    ContactPhone,
+    ContactURL,
+)
 from .currency import (
     Currency,
 )
 from .date_time import (
     DateTime,
 )
+from .location import (
+    Location,
+)
 from .media import (
-    Media,
+    Audio,
+    Document,
+    Image,
+    Sticker,
+    Video,
 )
 from .message import (
     Message,

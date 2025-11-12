@@ -5,12 +5,18 @@ from .components import (
     ComponentSubType,
     ComponentType,
 )
-from .datetimes import (
+from .contact import (
+    ContactAddressType,
+    ContactEmailType,
+    ContactPhoneType,
+    ContactURLType,
+)
+from .datetime import (
     CalendarType,
     DayOfWeekName,
     DayofWeekNumber,
 )
-from .messages import (
+from .message import (
     MessageType,
     MessagingProduct,
     RecipientType,

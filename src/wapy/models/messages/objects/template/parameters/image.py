@@ -3,7 +3,7 @@ from typing import Literal
 from pydantic import BaseModel
 
 from wapy import constants
-from wapy.models.messages.objects.media import Media
+from wapy.models.messages.objects.media import Image
 
 
 class ImageParameter(BaseModel):
@@ -16,7 +16,7 @@ class ImageParameter(BaseModel):
     Describes the parameter type. 
     """
 
-    image: Media
+    image: Image
     """
     A media object of type image.
     """

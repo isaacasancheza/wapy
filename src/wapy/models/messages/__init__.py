@@ -2,13 +2,40 @@ from typing import Annotated
 
 from pydantic import Field
 
+from .audio import (
+    AudioMessage,
+)
+from .contact import (
+    ContactMessage,
+)
+from .document import (
+    DocumentMessage,
+)
+from .image import (
+    ImageMessage,
+)
+from .location import (
+    LocationMessage,
+)
 from .objects import (
+    Audio,
+    Contact,
+    ContactAddress,
+    ContactEmail,
+    ContactName,
+    ContactOrg,
+    ContactPhone,
+    ContactURL,
     Currency,
     DateTime,
-    Media,
+    Document,
+    Image,
+    Location,
     Reaction,
+    Sticker,
     Template,
     Text,
+    Video,
 )
 from .objects.template import (
     BodyComponent,
@@ -27,15 +54,32 @@ from .objects.template import (
     URLButtonComponent,
     URLButtonParameter,
 )
+from .reaction import (
+    ReactionMessage,
+)
+from .sticker import (
+    StickerMessage,
+)
 from .template import (
     TemplateMessage,
 )
 from .text import (
     TextMessage,
 )
+from .video import (
+    VideoMessage,
+)
 
 type Message = Annotated[
-    TextMessage | TemplateMessage,
+    TextMessage
+    | AudioMessage
+    | ImageMessage
+    | VideoMessage
+    | ContactMessage
+    | StickerMessage
+    | DocumentMessage
+    | LocationMessage
+    | TemplateMessage,
     Field(
         discriminator='type',
     ),
