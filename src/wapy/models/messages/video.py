@@ -6,7 +6,7 @@ from wapy.models.messages.objects.message import Message
 
 
 class VideoMessage(Message):
-    type: Literal[constants.MessageType.IMAGE]
+    type: Literal[constants.MessageType.VIDEO]
     """
     The type of message you want to send. 
     """
