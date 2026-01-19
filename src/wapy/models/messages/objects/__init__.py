@@ -23,10 +23,6 @@ from .media import (
     Sticker,
     Video,
 )
-from .message import (
-    Message,
-    MessageContext,
-)
 from .reaction import (
     Reaction,
 )

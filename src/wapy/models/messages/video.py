@@ -1,8 +1,8 @@
 from typing import Literal
 
 from wapy import constants
+from wapy.models.messages.message import Message
 from wapy.models.messages.objects.media import Video
-from wapy.models.messages.objects.message import Message
 
 
 class VideoMessage(Message):

@@ -17,6 +17,9 @@ from .image import (
 from .location import (
     LocationMessage,
 )
+from .message import (
+    MessageContext,
+)
 from .objects import (
     Audio,
     Contact,
@@ -31,7 +34,6 @@ from .objects import (
     Document,
     Image,
     Location,
-    MessageContext,
     Reaction,
     Sticker,
     Template,
