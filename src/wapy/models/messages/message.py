@@ -1,4 +1,4 @@
-from pydantic import BaseModel, computed_field
+from pydantic import BaseModel, computed_field, model_validator
 
 from wapy import constants
 
@@ -8,8 +8,17 @@ class MessageContext(BaseModel):
 
 
 class Message(BaseModel):
-    to: str
+    to: str | None = None
+    recipient: str | None = None
     context: MessageContext | None = None
+
+    @model_validator(mode='after')
+    def validate_addressing(self) -> 'Message':
+        if self.to is None and self.recipient is None:
+            raise ValueError('one of to or recipient is required')
+        if self.to is not None and self.recipient is not None:
+            raise ValueError('to and recipient are mutually exclusive')
+        return self
 
     @computed_field
     def recipient_type(self) -> constants.RecipientType:
