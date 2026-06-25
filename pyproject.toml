@@ -1,6 +1,6 @@
 [project]
 name = "wapy"
-version = "0.8.0"
+version = "0.8.1"
 description = "WhatsApp Cloud API Pydantic Models"
 authors = [
     { name = "Isaac Sánchez", email = "isaac@elrincondelsanchez.com" }
