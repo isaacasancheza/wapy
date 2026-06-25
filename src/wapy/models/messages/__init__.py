@@ -14,6 +14,9 @@ from .document import (
 from .image import (
     ImageMessage,
 )
+from .interactive import (
+    InteractiveMessage,
+)
 from .location import (
     LocationMessage,
 )
@@ -33,6 +36,9 @@ from .objects import (
     DateTime,
     Document,
     Image,
+    Interactive,
+    InteractiveButtonReply,
+    InteractiveListReply,
     Location,
     Reaction,
     Sticker,
@@ -82,7 +88,8 @@ type Message = Annotated[
     | StickerMessage
     | DocumentMessage
     | LocationMessage
-    | TemplateMessage,
+    | TemplateMessage
+    | InteractiveMessage,
     Field(
         discriminator='type',
     ),

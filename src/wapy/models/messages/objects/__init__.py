@@ -13,6 +13,11 @@ from .currency import (
 from .date_time import (
     DateTime,
 )
+from .interactive import (
+    Interactive,
+    InteractiveButtonReply,
+    InteractiveListReply,
+)
 from .location import (
     Location,
 )

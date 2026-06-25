@@ -16,6 +16,9 @@ from .datetime import (
     DayOfWeekName,
     DayofWeekNumber,
 )
+from .interactive import (
+    InteractiveType,
+)
 from .message import (
     MessageType,
     MessagingProduct,
