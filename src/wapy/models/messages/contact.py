@@ -11,7 +11,7 @@ class ContactMessage(Message):
     The type of message you want to send. 
     """
 
-    contact: Contact
+    contacts: list[Contact]
     """
-    A contacts object.
+    An array of contact objects.
     """
